@@ -34,3 +34,14 @@ npm install @apollo/client graphql
 - Set Up Apollo Client
 - Create Fetch Function w/ Grapql
 - Render Initial Data/Character List
+
+// new
+- Install And.Design UI Library
+```bash
+npm install antd
+```
+- Fix Components to .tsx Format
+- Add Navigational Bar w/ Filters
+- Implement Filters
+- Add Grid System on Character Layout
+- Add Card Component on Character Info
