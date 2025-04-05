@@ -45,5 +45,7 @@ npm install antd
 - Add Card Component on Character Info
 
 //fix
-- Task: Render Initial Data/Character List [FIX: Now renders characters in map through id from query, no more duplicate character when rendering through name ]
-- Task: Implement Filters [FIX: Now uses filter argument through query]
+- Task: Render Initial Data/Character List [FIX: Inserted page argument into query, Now uses info variables to determine page size]
+
+//new
+- Add Pagination on Character Layout
