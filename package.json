@@ -13,9 +13,11 @@
   "dependencies": {
     "@apollo/client": "^3.13.5",
     "antd": "^5.24.6",
+    "bootstrap-icons": "^1.11.3",
     "graphql": "^16.10.0",
     "next": "15.2.4",
     "react": "^19.0.0",
+    "react-bootstrap-icons": "^1.11.5",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {

@@ -34,8 +34,6 @@ npm install @apollo/client graphql
 - Set Up Apollo Client
 - Create Fetch Function w/ Grapql
 - Render Initial Data/Character List
-
-// new
 - Install And.Design UI Library
 ```bash
 npm install antd
@@ -45,3 +43,7 @@ npm install antd
 - Implement Filters
 - Add Grid System on Character Layout
 - Add Card Component on Character Info
+
+//fix
+- Task: Render Initial Data/Character List [FIX: Now renders characters in map through id from query, no more duplicate character when rendering through name ]
+- Task: Implement Filters [FIX: Now uses filter argument through query]

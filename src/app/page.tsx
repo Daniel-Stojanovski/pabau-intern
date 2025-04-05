@@ -6,10 +6,9 @@ import client from "../../apollo_client.js"
 
 import { ApolloProvider } from "@apollo/client";
 
-import { Switch } from 'antd';
-
 import NavBar from "./blocks/NavBar"
 import CharactersList from "./blocks/CharactersList"
+import ModeSwitch from './blocks/ModeSwich';
 
 export default function Home() {
 
@@ -38,9 +37,7 @@ export default function Home() {
           />
         </main>
         <footer className={styles.footer}>
-          <h4>Light</h4>
-          <Switch defaultChecked/>
-          <h4>Dark</h4>
+          <ModeSwitch />
         </footer>
       </div>
     </ApolloProvider>

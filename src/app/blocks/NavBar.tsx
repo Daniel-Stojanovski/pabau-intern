@@ -1,6 +1,7 @@
 import { Radio, Flex } from "antd";
-import type { FlexProps } from 'antd';
 import type { CheckboxGroupProps } from 'antd/es/checkbox';
+
+import * as i from 'react-bootstrap-icons';
 
 const statusOptions: CheckboxGroupProps<string>['options'] = [
     { label: 'Whatever', value: 'All' },
@@ -16,8 +17,14 @@ const speciesOptions: CheckboxGroupProps<string>['options'] = [
 ];
 
 const sortOptions: CheckboxGroupProps<string>['options'] = [
+    { label: 'None', value: "None"},
     { label: 'Name', value: 'Name' },
     { label: 'Origin', value: 'Origin' },
+];
+
+const sortByOptions: CheckboxGroupProps<string>['options'] = [
+    { label: <i.SortAlphaDown/>, value: 'az' },
+    { label: <i.SortAlphaDownAlt/>, value: 'za' },
 ];
 
 const boxStyle: React.CSSProperties = {
@@ -76,7 +83,15 @@ export default function NavBar({
                 <h4>Sort</h4>
                 <Radio.Group style={padStyle}
                     block
-                    options={sortOptions}                    
+                    options={sortOptions}
+                    defaultValue="None"                   
+                    optionType="button"
+                    buttonStyle="solid"
+                />
+                <Radio.Group style={padStyle}
+                    block
+                    options={sortByOptions}   
+                    // defaultValue="az"                 
                     optionType="button"
                     buttonStyle="solid"
                 />
