@@ -43,9 +43,11 @@ npm install antd
 - Implement Filters
 - Add Grid System on Character Layout
 - Add Card Component on Character Info
-
-//fix
-- Task: Render Initial Data/Character List [FIX: Inserted page argument into query, Now uses info variables to determine page size]
+- Add Pagination on Character Layout
 
 //new
-- Add Pagination on Character Layout
+- Implement Sorting
+- Add Loading Placeholders
+- Add Language Switch
+- Implement Language Dictionaries
+- Apply UI/UX

@@ -1,13 +1,24 @@
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
-}
+} */
 
+/* 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+} */
+:root {
+  --background: #ededed;
+  --foreground: #171717;
 }
 
 html,
@@ -35,8 +46,19 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+header {
+  position: fixed;
+  top: 0;
+  z-index: 2;
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+}
+
+
+
+

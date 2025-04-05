@@ -8,13 +8,19 @@ import { ApolloProvider } from "@apollo/client";
 
 import NavBar from "./blocks/NavBar"
 import CharactersList from "./blocks/CharactersList"
-import ModeSwitch from './blocks/ModeSwich';
+import LangSwitch from './blocks/LangSwitch';
 
 export default function Home() {
 
   const [statusFilter, setStatusFilter] = useState('All');
   const [speciesFilter, setSpeciesFilter] = useState('All');
-  const [sortOption, setSortOption] = useState('Name');
+  const [sortOption, setSortOption] = useState('None');
+  // const [sortDirection, setSortDirection] = useState('az');
+  const [switchLanguage, setSwitchLanguage] = useState<boolean>(false);
+
+  const handleLanguageChange = (checked: boolean) => {
+    setSwitchLanguage(checked);
+  };
 
   return (
     <ApolloProvider client={client}>
@@ -27,6 +33,7 @@ export default function Home() {
             onStatusChange={setStatusFilter}
             onSpeciesChange={setSpeciesFilter}
             onSortChange={setSortOption}
+            switchLanguage={switchLanguage}
           />
         </header>
         <main className={styles.main}>
@@ -34,10 +41,14 @@ export default function Home() {
             statusFilter={statusFilter}
             speciesFilter={speciesFilter}
             sortOption={sortOption}
+            // sortDirection={sortDirection}
+            // switchLanguage={switchLanguage}
           />
         </main>
         <footer className={styles.footer}>
-          <ModeSwitch />
+          <LangSwitch
+            switchLanguage={switchLanguage}
+            onLanguageChange={handleLanguageChange}/>
         </footer>
       </div>
     </ApolloProvider>
